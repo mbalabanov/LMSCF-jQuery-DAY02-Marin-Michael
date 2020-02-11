@@ -51,7 +51,7 @@ function generateOrderTable() {
 	};
 
 	for (let i in ordersArray) {
-		let currentAmountPrice = ordersArray[i].price;
+		let currentAmountPrice = ordersArray[i].amount_ordered * ordersArray[i].price;
 
 		$('#orders').append(`
 			<div id="orders">
@@ -62,7 +62,7 @@ function generateOrderTable() {
 							<div class="truncatedtext">${ordersArray[i].name}</div>
 							<div class="productprice"><strong>$${ordersArray[i].price}</strong></div>
 						</td>
-						<td class="amountcolumn"><input type="number" maxlength="1" value="1" class="itemAmountField" id="ia${ordersArray[i].id}"></td>
+						<td class="amountcolumn"><input type="number" maxlength="2" min="0" max="${ordersArray[i].amount_stock}" value="${ordersArray[i].amount_ordered}" class="itemAmountField" id="ia${ordersArray[i].id}"></td>
 						<td class="itemPriceSubtotal"><span id="itp${ordersArray[i].id}">$${currentAmountPrice}</span></td>
 					</tr>
 				</table>
@@ -72,8 +72,13 @@ function generateOrderTable() {
 	};
 	$('#orders').show();
 
-	$('.itemAmountField').focus(function() {
-		console.log($(this).attr('id'));
+	$('.itemAmountField').change(function() {
+		let tempID = $(this).attr('id');
+		let tempValue = $(this).val()
+		tempID = tempID.substring(2);
+		let itemIndex = productdata.jewelry.findIndex((obj => obj.id == tempID));
+		productdata.jewelry[itemIndex].amount_ordered = tempValue;
+		generateOrderTable();
 	});	
 };
 
