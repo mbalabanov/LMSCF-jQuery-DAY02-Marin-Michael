@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Advent Handler</title>
+	<link rel="stylesheet" href="">
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: lightblue;
+		}
+		.container {
+			width: 48rem;
+			margin: 0 auto;
+			background-color: white;
+			box-shadow: 0 0 4px gray;
+		}
+		header {
+			padding:  1rem;
+			background-color: purple;
+			display: flex;
+			justify-content: space-between;
+		}
+		header h2 {
+			line-height: 30%;
+			color: white;
+		}
+		nav {
+			background-color: darkmagenta;
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+		}
+		nav ul {
+			padding-left: 0;
+		}
+		nav ul li, .signin ul li {
+			display: inline;
+		}
+		nav ul li a, .signin ul li a {
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			padding: 0.4rem;
+		}
+		#menuitems {
+			width: 50%;
+			margin: 0.6rem 0 0 0.6rem;
+		}
+		#searchbar {
+			width: 10%;
+			margin: 1.6rem 0 0 0.6rem;
+		}
+		.shoppingcartbackground {
+			background-color: purple;
+			padding: 0;
+		}
+		#shoppingcart {
+			color: white;
+			text-align: right;
+			margin: 1.6rem 1rem 0 1rem;
+			padding: 0;
+		}
+		#shoppingcart span {
+			color: white;
+		}
+		.productcontainer {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.flexcontainer {
+			width: 14rem;
+		}
+		.flexcontainer img {
+			width: 100%;
+		}
+		main h1 {
+			text-align: center;
+		}
+		footer {
+			background-color: darkmagenta;
+			text-align: center;
+			color: white;
+			padding: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="shopname">
+				<h2>OUR SHOP</h2>
+			</div>
+			<div class="signin">
+				<ul>
+					<li><a href="#">Sign in</a></li>
+					<li><a href="#">Create Account</a></li>
+				</ul>
+			</div>
+
+		</header>
+		<nav>
+			<div id="menuitems">
+				<ul>
+					<li><a href="#" title="home">Home</a></li>
+					<li><a href="#" title="eyewear">Eyewear</a></li>
+					<li><a href="#" title="shoes">Shoes</a></li>
+					<li><a href="#" title="jewelry">Jewelry</a></li>
+					<li><a href="#" title="vip">VIP</a></li>
+				</ul>				
+			</div>
+			<div id="searchbar">
+				<input type="text" name="search" size="14">
+			</div>
+			<div class="shoppingcartbackground">
+				<div id="shoppingcart">
+					View Cart <span id="cartamount">(0)</span>&#x25BC;
+				</div>	
+			</div>
+
+
+		</nav>
+		<main>
+			<h1>Featured Products</h1>
+			<div class="productcontainer">
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+				<div class="flexcontainer">
+					<img src="img/christmas-box.png" alt="Present" class="present">
+				</div>
+			</div>
+
+		</main>
+		<footer>
+			&copy; 2020 Our Shop Company
+		</footer>
+
+	</div>
+
+	<script>
+		$( document ).ready(function() {
+
+
+
+		});
+	</script>
+</body>
+</html>
