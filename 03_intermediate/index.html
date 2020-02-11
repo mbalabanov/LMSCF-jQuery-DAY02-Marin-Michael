@@ -55,7 +55,7 @@
 			width: 10%;
 			margin: 1.6rem 0 0 0.6rem;
 		}
-		.shoppingcartbackground {
+		.cartback {
 			background-color: purple;
 			padding: 0;
 		}
@@ -68,16 +68,40 @@
 		#shoppingcart span {
 			color: white;
 		}
-		.productcontainer {
+		#viewcart {
+			border: 1px solid black;
+			background-color: green;
+			overflow: hidden;
+			display: flex;
+			width: 20rem;
+			float: right;
+
+		}
+		.allproducts {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-around;
 		}
-		.flexcontainer {
+		.productcontainer {
+			border: 1px solid lightgrey;
+			margin-bottom: 2rem;
+		}
+		.imagecontainer {
 			width: 14rem;
 		}
-		.flexcontainer img {
+		.imagecontainer img {
 			width: 100%;
+		}
+		.productinfo {
+			text-align: center;
+		}
+		.productinfo button {
+			margin: 1rem;
+			background-color: purple;
+			color: white;
+			border-radius: 0.5rem;
+			border: none;
+			padding: 0.4rem;
 		}
 		main h1 {
 			text-align: center;
@@ -117,46 +141,119 @@
 			<div id="searchbar">
 				<input type="text" name="search" size="14">
 			</div>
-			<div class="shoppingcartbackground">
+			<div class="cartback">
 				<div id="shoppingcart">
 					View Cart <span id="cartamount">(0)</span>&#x25BC;
 				</div>	
 			</div>
-
-
 		</nav>
+			<div id="viewcart">
+				<p>sldfkj</p>
+				<p>asdlkfj</p>
+			</div>
 		<main>
+
 			<h1>Featured Products</h1>
-			<div class="productcontainer">
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+			<div class="allproducts">
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
-				<div class="flexcontainer">
-					<img src="img/christmas-box.png" alt="Present" class="present">
+
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="img/christmas-box.png" alt="Present" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">product name</p>
+						<p class="price">Price</p>
+						<button type="">&#128722;Add to cart</button>
+					</div>
 				</div>
 			</div>
-
 		</main>
 		<footer>
 			&copy; 2020 Our Shop Company
