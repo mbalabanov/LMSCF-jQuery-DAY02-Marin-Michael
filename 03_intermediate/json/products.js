@@ -3,7 +3,7 @@
 let productdata = JSON.parse(`{
     "jewelry": [
        {
-         "id": "1",
+         "id": "0",
          "name": "Collette Sterling-Silver Zirconia Bezel Halo Dangle Earrings",
          "image": "img/01_earrings.jpg",
          "amount_stock": "12",
@@ -12,7 +12,7 @@ let productdata = JSON.parse(`{
          "price": "200"
        },
        {
-         "id": "2",
+         "id": "1",
          "name": "Yellow Gold-and-Black Hills 10 carat Gold-Diamond Heart Pendant",
          "image": "img/02_pendant.jpg",
          "amount_stock": "8",
@@ -21,7 +21,7 @@ let productdata = JSON.parse(`{
          "price": "150"
        },
        {
-         "id": "3",
+         "id": "2",
          "name": "Black Hills Gold-on-Silver Open-Heart Pendant ",
          "image": "img/03_pendant.jpg",
          "amount_stock": "32",
@@ -30,7 +30,7 @@ let productdata = JSON.parse(`{
          "price": "160"
        },
        {
-         "id": "4",
+         "id": "3",
          "name": "Yellow 18 carat Gold-plated Cubic Zirconia Solitaire Engagement Ring",
          "image": "img/04_ring.jpg",
          "amount_stock": "2",
@@ -39,7 +39,7 @@ let productdata = JSON.parse(`{
          "price": "200"
        },
        {
-         "id": "5",
+         "id": "4",
          "name": "Glitzy Rocks Sterling Silver London Blue-Topaz Braided Link Bracelet",
          "image": "img/05_bracelet.jpg",
          "amount_stock": "22",
@@ -48,7 +48,7 @@ let productdata = JSON.parse(`{
          "price": "300"
        },
        {
-         "id": "6",
+         "id": "5",
          "name": "Handmade Gold-Accent Sterling-Silver Wishes Bracelet",
          "image": "img/06_bracelet.jpg",
          "amount_stock": "2",
@@ -57,7 +57,7 @@ let productdata = JSON.parse(`{
          "price": "360"
        },
        {
-         "id": "7",
+         "id": "6",
          "name": "Moissanite by Charles Colvard 14 carat Gold Round Solitaire Ring",
          "image": "img/07_ring.jpg",
          "amount_stock": "4",
@@ -66,7 +66,7 @@ let productdata = JSON.parse(`{
          "price": "240"
        },
        {
-         "id": "8",
+         "id": "7",
          "name": "Sterling Silver Cubic Zirconia Solitaire Engagement Ring",
          "image": "img/08_ring.jpg",
          "amount_stock": "6",
@@ -75,7 +75,7 @@ let productdata = JSON.parse(`{
          "price": "220"
        },
        {
-         "id": "9",
+         "id": "8",
          "name": "Sterling Silver Round Solitaire Zirconia Stud Earrings",
          "image": "img/09_earrings.jpg",
          "amount_stock": "18",
