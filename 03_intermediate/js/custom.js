@@ -1,4 +1,5 @@
 let ordersarray = [];
+let cartContentDiv = '';
 
 for (let i in productdata.jewelry) {
 	$('#allproducts').append(`
@@ -23,12 +24,13 @@ for (let i in productdata.jewelry) {
 
  $('#shoppingcart').on('click', function() {
  	
- 	let orderitem = '';
- 	let cartContentDiv = '';
+ 	$('#orders').replaceWith('<div id="orders"></div>');
+ 	
+ 	cartContentDiv = '';
 
 	for (let i in ordersarray) {
-
-		$('#orders').append(`
+		cartContentDiv += `
+			<div id="orders">
 				<table id="ordertable">
 					<tr>
 						<td class="imagecolumn"><img src="${ordersarray[i].image}" alt="${ordersarray[i].name}"></td>
@@ -43,10 +45,10 @@ for (let i in productdata.jewelry) {
 					</tr>
 				</table>
 			</div>
-		`);
-
+		`;
 	}
 
+	$('#orders').replaceWith(cartContentDiv);
 
 });
 
