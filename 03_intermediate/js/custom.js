@@ -36,6 +36,7 @@ function addItemToCart() {
 		ordersArray.push(itemOrder);
 		console.table(ordersArray);
 		$('#cartamount').replaceWith('<span id="cartamount">' + ordersArray.length + '</span>');
+		$(this).replaceWith('<button class="addedButton">Added to cart</button>');
 	}
 }
 
