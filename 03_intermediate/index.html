@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Advent Handler</title>
-	<link rel="stylesheet" href="">
 	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="json/products.js" type="text/javascript" charset="utf-8"></script>
 	<style>
@@ -73,13 +72,16 @@
 			font-size: 80%;
 			position: relative;
 		}
-		#orders {
+		#cartabsolute {
 			position: absolute;
 			width: 25rem;
 			top: 0;
 			right: 0rem;
 			background-color: white;
 			box-shadow: 0 0 4px gray;
+		}
+		#orders {
+
 		}
 		.productname {
 			height: 3.5rem;
@@ -98,6 +100,10 @@
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
+		}
+		.productprice {
+			margin-top: 0;
+			padding-top: 0;
 		}
 		.pricesubtotal {
 			width: 5rem;
@@ -131,6 +137,14 @@
 			border: none;
 			padding: 0.4rem;
 		}
+		#calculations {
+			background-color: lightgray;
+			height: 7rem;
+			text-align: right;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 1rem;
+		}
 		main h1 {
 			text-align: center;
 		}
@@ -146,7 +160,7 @@
 	<div class="container">
 		<header>
 			<div class="shopname">
-				<h2>OUR SHOP</h2>
+				<h2>Our Shop</h2>
 			</div>
 			<div class="signin">
 				<ul>
@@ -176,29 +190,10 @@
 			</div>
 		</nav>
 		<div id="viewcart">
-			<div id="orders">
-				<table id="ordertable">
-					<tr>
-						<td class="imagecolumn"><img src="img/01_earrings.jpg" alt="Productname"></td>
-						<td class="namecolumn"><div class="truncatedtext">Golden Earrings with braided diamond</div></td>
-						<td class="add"><button type="button">+</button></td>
-						<td class="amountcolumn">4</td>
-						<td class="substract"><button type="button">-</button></td>
-						<td class="pricesubtotal">$ 340.00</td>
-					</tr>
-					<tr>
-						<td class="imagecolumn"><img src="img/01_earrings.jpg" alt="Productname"></td>
-						<td class="namecolumn"><div class="truncatedtext">Golden Earrings with braided diamond</div></td>
-						<td class="add"><button type="button">+</button></td>
-						<td class="amountcolumn">4</td>
-						<td class="substract"><button type="button">-</button></td>
-						<td class="pricesubtotal">$ 340.00</td>
-					</tr>
-				</table>
-			</div>
-
-			<div id="calculations">
-				
+			<div id="cartabsolute">
+				<div id="orders">
+					
+				</div>
 			</div>
 		</div>
 		<main>
@@ -213,26 +208,6 @@
 		</footer>
 
 	</div>
-
-	<script>
-		$( document ).ready(function() {
-
-			for (let i in productdata.jewelry) {
-				$('#allproducts').append(`
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="${productdata.jewelry[i].image}" alt="${productdata.jewelry[i].name}" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">${productdata.jewelry[i].name}</p>
-						<p class="price"><strong>€ ${productdata.jewelry[i].price}.-</strong><span class="originalprice"></span></p>
-						<button type="button" id="${productdata.jewelry[i].id}" class="orderbutton">&#128722;Add to cart</button>
-					</div>
-				</div>
-					`)
-			}
-
-		});
-	</script>
+	<script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
