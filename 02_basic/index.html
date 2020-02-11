@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Advent Handler</title>
+	<link rel="stylesheet" href="">
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.container {
+			width: 48rem;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 auto;
+		}
+		.flexcontainer {
+			width: 16rem;
+		}
+		.flexcontainer img {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<p id="output"></p>
+	<div class="container">
+		<div class="flexcontainer">
+			<img src="img/christmas-box.png" alt="Present" class="present">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/santa-claus.png" alt="Santa" class="santa">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/christmas-box.png" alt="Present" class="present">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/christmas-box.png" alt="Present" class="present">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/santa-claus.png" alt="Santa" class="santa">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/christmas-box.png" alt="Present" class="present">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/santa-claus.png" alt="Santa" class="santa">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/christmas-box.png" alt="Present" class="present">
+		</div>
+		<div class="flexcontainer">
+			<img src="img/santa-claus.png" alt="Santa" class="santa">
+		</div>
+	</div>
+
+	<script>
+		$( document ).ready(function() {
+
+			$('.santa').on('click', function(){
+				$(this).remove();
+			})
+
+		});
+	</script>
+</body>
+</html>
