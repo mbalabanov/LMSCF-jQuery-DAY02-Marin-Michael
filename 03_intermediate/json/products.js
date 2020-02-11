@@ -4,7 +4,7 @@ let productdata = JSON.parse(`{
     "jewelry": [
        {
          "id": "1",
-         "name": "Collette Z-Sterling-Silver with Rhodium-Plated Clear Round Cubic Zirconia Bezel Halo Dangle Earrings",
+         "name": "Collette Sterling-Silver Zirconia Bezel Halo Dangle Earrings",
          "image": "img/01_earrings.jpg",
          "amount": "12",
          "original_price": "300",

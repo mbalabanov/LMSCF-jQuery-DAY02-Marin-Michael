@@ -6,6 +6,7 @@
 	<title>Advent Handler</title>
 	<link rel="stylesheet" href="">
 	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="json/products.js" type="text/javascript" charset="utf-8"></script>
 	<style>
 		body {
 			font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +15,7 @@
 			background-color: lightblue;
 		}
 		.container {
-			width: 48rem;
+			width: 52rem;
 			margin: 0 auto;
 			background-color: white;
 			box-shadow: 0 0 4px gray;
@@ -69,15 +70,43 @@
 			color: white;
 		}
 		#viewcart {
-			border: 1px solid black;
-			background-color: green;
-			overflow: hidden;
-			display: flex;
-			width: 20rem;
-			float: right;
-
+			font-size: 80%;
+			position: relative;
 		}
-		.allproducts {
+		#orders {
+			position: absolute;
+			width: 25rem;
+			top: 0;
+			right: 0rem;
+			background-color: white;
+			box-shadow: 0 0 4px gray;
+		}
+		#ordertable tr {
+			border-bottom: 1px solid gray;
+		}
+		.productname {
+			height: 3.5rem;
+		}
+		.imagecolumn {
+			width: 3rem;
+		}
+		.imagecolumn img {
+			width: 100%;
+		}
+		.namecolumn {
+			width: 12rem;
+		}
+		.truncatedtext {
+			width: 11rem;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.pricesubtotal {
+			width: 5rem;
+			text-align: right;
+		}
+		#allproducts {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-around;
@@ -85,9 +114,11 @@
 		.productcontainer {
 			border: 1px solid lightgrey;
 			margin-bottom: 2rem;
+			width: 14rem;
+			padding: 0.5rem;
 		}
 		.imagecontainer {
-			width: 14rem;
+			width: 13rem;
 		}
 		.imagecontainer img {
 			width: 100%;
@@ -147,112 +178,37 @@
 				</div>	
 			</div>
 		</nav>
-			<div id="viewcart">
-				<p>sldfkj</p>
-				<p>asdlkfj</p>
+		<div id="viewcart">
+			<div id="orders">
+				<table id="ordertable">
+					<tr>
+						<td class="imagecolumn"><img src="img/01_earrings.jpg" alt="Productname"></td>
+						<td class="namecolumn"><div class="truncatedtext">Golden Earrings with braided diamond</div></td>
+						<td class="add"><button type="button">+</button></td>
+						<td class="amountcolumn">4</td>
+						<td class="substract"><button type="button">-</button></td>
+						<td class="pricesubtotal">$ 340.00</td>
+					</tr>
+					<tr>
+						<td class="imagecolumn"><img src="img/01_earrings.jpg" alt="Productname"></td>
+						<td class="namecolumn"><div class="truncatedtext">Golden Earrings with braided diamond</div></td>
+						<td class="add"><button type="button">+</button></td>
+						<td class="amountcolumn">4</td>
+						<td class="substract"><button type="button">-</button></td>
+						<td class="pricesubtotal">$ 340.00</td>
+					</tr>
+				</table>
 			</div>
+
+			<div id="calculations">
+				
+			</div>
+		</div>
 		<main>
 
 			<h1>Featured Products</h1>
-			<div class="allproducts">
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
+			<div id="allproducts">
 
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
-
-				<div class="productcontainer">
-					<div class="imagecontainer">
-						<img src="img/christmas-box.png" alt="Present" class="present">
-					</div>
-					<div class="productinfo">
-						<p class="productname">product name</p>
-						<p class="price">Price</p>
-						<button type="">&#128722;Add to cart</button>
-					</div>
-				</div>
 			</div>
 		</main>
 		<footer>
@@ -264,7 +220,20 @@
 	<script>
 		$( document ).ready(function() {
 
-
+			for (let i in productdata.jewelry) {
+				$('#allproducts').append(`
+				<div class="productcontainer">
+					<div class="imagecontainer">
+						<img src="${productdata.jewelry[i].image}" alt="${productdata.jewelry[i].name}" class="present">
+					</div>
+					<div class="productinfo">
+						<p class="productname">${productdata.jewelry[i].name}</p>
+						<p class="price"><strong>€ ${productdata.jewelry[i].price}.-</strong><span class="originalprice"></span></p>
+						<button type="button" id="${productdata.jewelry[i].id}" class="orderbutton">&#128722;Add to cart</button>
+					</div>
+				</div>
+					`)
+			}
 
 		});
 	</script>
