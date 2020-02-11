@@ -34,7 +34,6 @@ function addItemToCart() {
 	if (jQuery.inArray(item, ordersClick) == '-1') {
 		ordersClick.push(item);
 		ordersArray.push(itemOrder);
-		console.table(ordersArray);
 		$('#cartamount').replaceWith('<span id="cartamount">' + ordersArray.length + '</span>');
 		$(this).replaceWith('<button class="addedButton">Added to cart</button>');
 		$('.addedButton').click(function() { $('#orders').hide(); });
@@ -60,7 +59,7 @@ function generateOrderTable() {
 						<td class="imagecolumn"><img src="${ordersArray[i].image}" alt="${ordersArray[i].name}"></td>
 						<td class="namecolumn">
 							<div class="truncatedtext">${ordersArray[i].name}</div>
-							<div class="productprice"><strong>$${ordersArray[i].price}</strong></div>
+							<div class="productprice"><strong>$${ordersArray[i].price}</strong> (${ordersArray[i].amount_stock} in stock)</div>
 						</td>
 						<td class="amountcolumn"><input type="number" maxlength="2" min="0" max="${ordersArray[i].amount_stock}" value="${ordersArray[i].amount_ordered}" class="itemAmountField" id="ia${ordersArray[i].id}"></td>
 						<td class="itemPriceSubtotal"><span id="itp${ordersArray[i].id}">$${currentAmountPrice}</span></td>
@@ -70,6 +69,7 @@ function generateOrderTable() {
 		`);
 
 	};
+
 	$('#orders').show();
 
 	$('.itemAmountField').change(function() {
