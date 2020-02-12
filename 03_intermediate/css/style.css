@@ -65,7 +65,8 @@ nav ul li a, .signin ul li a {
 }
 #cartabsolute {
 	position: absolute;
-	width: 25rem;
+	padding: 0 1rem 1rem 1rem;
+	width: 27rem;
 	top: 0;
 	right: 0rem;
 	background-color: white;
@@ -88,7 +89,7 @@ table, tr {
 	border-bottom: 1px solid gray;
 }
 #ordertable td {
-	vertical-align: top;
+	vertical-align: middle;
 
 }
 .imagecolumn {
@@ -98,10 +99,10 @@ table, tr {
 	width: 100%;
 }
 .namecolumn {
-	width: 12rem;
+	width: 14rem;
 }
 .truncatedtext {
-	width: 11rem;
+	width: 13rem;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -109,11 +110,13 @@ table, tr {
 .itemAmountField {
 	width: 2rem;
 	margin-top: 0;
+	padding: 0.4rem;
 }
 .itemPriceSubtotal {
-	width: 4rem;
+	width: 6rem;
 	text-align: right;
-	font-weight: bold;
+	font-size: 200%;
+	color: gray;
 }
 
 /* Calculated Part of Shopping Cart*/
@@ -125,6 +128,8 @@ table, tr {
 	width: 5rem;
 	text-align: right;
 }
+
+/* Products in overview grid */
 #allproducts {
 	display: flex;
 	flex-wrap: wrap;
